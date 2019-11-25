@@ -13,7 +13,9 @@ const addLetter = () => {
   activeLetter++;
   if (activeLetter === txt[activeText].length) {
     activeText++;
-    if (activeText === txt.length) return;
+    if (activeText === txt.length) {
+      activeText = 0;
+    };
     return setTimeout(() => {
       activeLetter = -10;
       spanText.textContent = "";
